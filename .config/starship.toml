@@ -1,0 +1,16 @@
+format = """
+$kubernetes\
+$git_branch\
+$directory\
+$character\
+"""
+
+[directory]
+format = '|[$path]($style)[$read_only]($read_only_style)'
+
+[kubernetes]
+disabled = false
+format = '|[$context]($style)'
+
+[git_branch]
+format = '|[$branch(:$remote_branch)]($style)'
