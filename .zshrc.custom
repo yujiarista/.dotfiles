@@ -1,0 +1,16 @@
+setopt nosharehistory
+
+alias dotfiles='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias makecheck='make importcheck fmtcheck metalint'
+
+alias cdarista='cd ~/go/src/arista'
+
+alias forwardchport='kubectl -n clickhouse port-forward po/clickhouse-0 17000:1700 --context'
+
+alias keepchportalive='for i in {1..300}; do curl 127.0.0.1:17000; sleep 120; done'
+
+alias chclient='kubectl --namespace clickhouse exec -it clickhouse-0 -- bash -c "HOME=/tmp; clickhouse client --port 17000"'
+
+alias cdsmoketest='cd ~/go/src/arista/cmd/smoketest'
+
